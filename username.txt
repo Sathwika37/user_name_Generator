@@ -1,0 +1,64 @@
+
+name = input("Enter your first name: ")
+fav = input("Enter your favourite word: ")
+
+
+
+
+pos_index_1 = name[0]        
+pos_index_2 = fav[1]         
+print("Positive Index from name:", pos_index_1)
+print("Positive Index from fav word:", pos_index_2)
+
+
+neg_index_1 = name[-1]       
+neg_index_2 = fav[-1]       
+print("Negative Index from name:", neg_index_1)
+print("Negative Index from fav word:", neg_index_2)
+
+
+slice_name = name[:3]        
+slice_fav = fav[-3:]         
+print("Slicing name (0:3):", slice_name)
+print("Slicing fav (-3:):", slice_fav)
+
+concat_result = slice_name + slice_fav
+print("Concatenation of slices:", concat_result)
+
+
+repeat_char = name[0] * 2
+print("Repeated first character:", repeat_char)
+
+
+upper_name = name.upper()
+lower_fav = fav.lower()
+print("Name in UPPER case:", upper_name)
+print("Favourite word in lower case:", lower_fav)
+
+
+vowels = "aeiouAEIOU"
+vowel_count = 0
+consonant_count = 0
+
+for ch in name:
+    if ch.isalpha():
+        if ch in vowels:
+            vowel_count += 1
+        else:
+            consonant_count += 1
+
+print("Vowel Count in Name:", vowel_count)
+print("Consonant Count in Name:", consonant_count)
+
+
+username = (
+    pos_index_1 + 
+    pos_index_2 + 
+    neg_index_1 + 
+    neg_index_2 + 
+    concat_result + 
+    repeat_char
+)
+
+print("\n--- FINAL GENERATED USERNAME ---")
+print("Your Username:", username)
